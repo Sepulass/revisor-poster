@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: revisor-poster
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev || true
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false   # se pega en el panel de Render, nunca en el código
+      - key: ACCESS_CODE
+        sync: false   # el código que compartes con tus estudiantes
+      - key: MODEL
+        value: claude-sonnet-5-5
+      - key: DAILY_LIMIT
+        value: "5"

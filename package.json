@@ -1,0 +1,13 @@
+{
+  "name": "revisor-poster",
+  "version": "1.0.0",
+  "description": "Revisión formativa de pósters científicos con la API de Claude",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
